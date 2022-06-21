@@ -58,7 +58,7 @@ sysctl -w net.core.netdev_max_backlog=16384
 可用知名端口范围:
 
 ```
-sysctl -w net.ipv4.ip_local_port_range='1000 65535'
+sysctl -w net.ipv4.ip_local_port_range='1024 65535'
 ```
 
 TCP Socket 读写 Buffer 设置:
