@@ -58,21 +58,25 @@ sysctl -w net.core.netdev_max_backlog=16384
 可用知名端口范围:
 
 ```
-sysctl -w net.ipv4.ip_local_port_range='1024 65535'
+sysctl -w net.ipv4.ip_local_port_range=1024 65535
 ```
 
 TCP Socket 读写 Buffer 设置:
 
 ```
+单位：字节
 sysctl -w net.core.rmem_default=262144
 sysctl -w net.core.wmem_default=262144
 sysctl -w net.core.rmem_max=16777216
 sysctl -w net.core.wmem_max=16777216
+
 sysctl -w net.core.optmem_max=16777216
 
-#sysctl -w net.ipv4.tcp_mem='16777216 16777216 16777216'
-sysctl -w net.ipv4.tcp_rmem='1024 4096 16777216'
-sysctl -w net.ipv4.tcp_wmem='1024 4096 16777216'
+单位：内存页（通常是4KB，查看页大小命令 getconf PAGESIZE）
+sysctl -w net.ipv4.tcp_mem=16777216 16777216 16777216
+单位：字节
+sysctl -w net.ipv4.tcp_rmem=4096 262144 16777216
+sysctl -w net.ipv4.tcp_wmem=4096 262144 16777216
 ```
 
 TCP 连接追踪设置:
