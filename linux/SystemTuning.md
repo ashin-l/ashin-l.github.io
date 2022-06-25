@@ -73,7 +73,7 @@ sysctl -w net.core.wmem_max=16777216
 sysctl -w net.core.optmem_max=16777216
 
 单位：内存页（通常是4KB，查看页大小命令 getconf PAGESIZE）
-sysctl -w net.ipv4.tcp_mem='16777216 16777216 16777216'
+#sysctl -w net.ipv4.tcp_mem='767766	1023690	1535532'
 单位：字节
 sysctl -w net.ipv4.tcp_rmem='4096 262144 16777216'
 sysctl -w net.ipv4.tcp_wmem='4096 262144 16777216'
