@@ -29,3 +29,11 @@ chmod a+x init.sh
 ```
 /root/init.sh
 ```
+
+也可直接将启动命令添加到文件末尾
+
+```
+cd /usr/local/kafka_2.13-3.1.1
+bin/zookeeper-server-start.sh config/zookeeper.properties &
+bin/kafka-server-start.sh config/server.properties &
+```
