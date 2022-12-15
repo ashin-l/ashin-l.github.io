@@ -23,11 +23,11 @@ chmod a+x init.sh
 
 ## 3. 在系统文件中增加配置
 
-使用vi等编辑工具打开文件`vi /etc/rc.d/rc.local`
+使用vi等编辑工具打开文件`vi /etc/rc.local`
 在文件末尾添加
 
 ```
-/root/init.sh
+/root/init.sh &
 ```
 
 也可直接将启动命令添加到文件末尾
